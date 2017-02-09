@@ -1,0 +1,15 @@
+inoremap <C-a> <C-Home><C-S-End>
+set hintchars=abcdefghijklmnopqrstuvwxyz
+ignorekeys add mail.google.com
+
+" Firefox 51 hack
+" Example keybinding: xt
+nmap xt :extraTab<SPACE>
+    
+command! extraTab -nargs=1 -description "Open an extra tab" :js extraTab("<args>");
+    
+:js <<EOF
+function extraTab(args) {
+    liberator.open(args, liberator.NEW_TAB)
+}
+EOF
