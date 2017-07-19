@@ -22,19 +22,17 @@ nnoremap ,cd :cd %:p:h<CR>:pwd<CR>
 """""""""""""""""""" search """""""""""""""""""""""
 " FZF
 set rtp+=~/.fzf
+let root = system('git rev-parse --show-toplevel')
 " ctrl-[a-z], alt-[a-z], f[1-4], or any single character
-nnoremap F :FZF<CR>
+nnoremap F :Gcd <bar> FZF<CR>
 
 " The Silver Search
+" Use ag over grep
 if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
+    let g:ackprg = 'ag --vimgrep'
 endif
+
 " bind K to grep word under cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
-
-" bind \ (backward slash) to grep shortcut
-command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-nnoremap \ :Ag<SPACE>
-
+nnoremap K :execute 'Gcd <bar> Ack! "<C-R><C-W>" <SPACE> --'.&filetype<CR>
+cnoreabbrev ag Gcd <bar> Ack! "<C-W>"
 
