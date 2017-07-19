@@ -1,4 +1,4 @@
-""""""""""""""""""" Basics """""""""""""""""""""""""" 
+""""""""""""""""""" Basic """"""""""""""""""""""""""
 " make font size comfortable
 set guifont=Monaco:h15
 " Use light solarized theme
@@ -10,7 +10,7 @@ set nospell
 map <leader>w :w<CR>
 map 0 ^
 "
-"""""""""""""""""""" search """""""""""""""""""""""
+"""""""""""""""""""" Project """""""""""""""""""""""
 " Use FZF to search files in a project
 set rtp+=~/.fzf
 nnoremap F :Gcd <bar> FZF<CR>
