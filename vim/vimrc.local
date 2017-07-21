@@ -3,6 +3,10 @@
 set guifont=Monaco:h15
 " Use light solarized theme
 set background=dark
+" Line number color
+highlight LineNr ctermfg=grey
+" Current line color
+hi CursorLine cterm=NONE ctermbg=NONE ctermfg=grey
 " auto wrap
 set wrap
 set nospell
@@ -17,7 +21,7 @@ nnoremap F :Gcd <bar> FZF<CR>
 
 " Use The Silver Searcher to search keywords in a project
 if executable('ag')
-    let g:ackprg = 'ag --vimgrep'
+    let g:ackprg = 'ag'
 endif
 nnoremap K :execute 'Gcd <bar> Ack! "<C-R><C-W>" <SPACE> --'.&filetype<CR>
 cnoreabbrev ag Gcd <bar> Ack! "<C-W>"
