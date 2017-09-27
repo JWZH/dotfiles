@@ -1,1 +1,2 @@
 Bundle 'editorconfig/editorconfig-vim'
+Bundle 'hashivim/vim-terraform'
