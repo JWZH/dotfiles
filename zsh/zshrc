@@ -62,10 +62,6 @@ export EDITOR='vim'
 # Autostart tmux
 if [ "$TMUX" = ""  ]; then tmux; fi
 
-# FZF config
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f ~/.fzf.utility.zsh ] && source ~/.fzf.utility.zsh
-
 # Vim key binding
 bindkey -v
 
@@ -73,5 +69,6 @@ bindkey -v
 alias zshconfig="vim ~/.zshrc"
 alias gs="git status"
 
-export PATH="/home/wjiang/github.com/phacility/arcanist/bin:$PATH"
-source /home/wjiang/github.com/phacility/arcanist/resources/shell/bash-completion
+[ -f ~/.fzf.utility.zsh ] && source ~/.fzf.utility.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
