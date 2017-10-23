@@ -164,4 +164,6 @@ exec --no-startup-id dropbox start
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86AudioRaiseVolume exec amixer set Master 5+
+bindsym XF86AudioLowerVolume exec amixer set Master 5-
 
