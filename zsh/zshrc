@@ -69,6 +69,7 @@ bindkey -v
 alias zshconfig="vim ~/.zshrc"
 alias gs="git status"
 
+[ -f ~/.autojump/share/autojump/autojump.zsh ] && source ~/.autojump/share/autojump/autojump.zsh
 [ -f ~/.fzf.utility.zsh ] && source ~/.fzf.utility.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
