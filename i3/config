@@ -36,11 +36,12 @@ bindsym $mod+Return exec konsole
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec /nix/store/3d9djl3iw419qdiim0iqdagcllpmffn5-dmenu-4.6/bin/dmenu_run
+# bindsym $mod+d exec /nix/store/3d9djl3iw419qdiim0iqdagcllpmffn5-dmenu-4.6/bin/dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec rofi -show run
 
 # change focus
 bindsym $mod+j focus left
@@ -159,7 +160,8 @@ bar {
 
 # Autostart
 exec --no-startup-id nm-applet
-exec --no-startup-id dropbox start
+exec --no-startup-id sh /home/wjiang/bin/dropbox-start
+exec --no-startup-id fluxgui
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
@@ -167,3 +169,5 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 bindsym XF86AudioRaiseVolume exec amixer set Master 5+
 bindsym XF86AudioLowerVolume exec amixer set Master 5-
 
+# Suspend and lock screen
+bindsym $mod+Ctrl+Shift+l exec systemctl suspend && i3lock -c 000000 -n
