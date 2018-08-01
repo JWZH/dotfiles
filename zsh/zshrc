@@ -69,7 +69,10 @@ bindkey -v
 alias zshconfig="vim ~/.zshrc"
 alias gs="git status"
 
-[ -f ~/.autojump/share/autojump/autojump.zsh ] && source ~/.autojump/share/autojump/autojump.zsh
-[ -f ~/.fzf.utility.zsh ] && source ~/.fzf.utility.zsh
+[ -f /usr/share/autojump/autojump.sh ] && source /usr/share/autojump/autojump.sh
+[ -f ~/github.com/wenzhengjiang/dotfiles/fzf/fzf.utility.zsh ] && source ~/github.com/wenzhengjiang/dotfiles/fzf/fzf.utility.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+export GOPATH=$HOME/go
+export GOBIN=$HOME/go/bin
+export PATH=$GOBIN:$PATH
