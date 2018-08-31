@@ -33,29 +33,35 @@
 
 # Enable autocomplete layer
 [[layers]]
-name = 'autocomplete'
-auto-completion-return-key-behavior = "complete"
-auto-completion-tab-key-behavior = "smart"
-
-[[layers]]
-name = 'shell'
-default_position = 'top'
-default_height = 30
-
-[[layers]]
-  name = "git"
-
-[[layers]]
-  name = "fzf"
+  name = 'autocomplete'
+  auto-completion-return-key-behavior = "complete"
+  auto-completion-tab-key-behavior = "smart"
 
 [[layers]]
   name = "checker"
 
 [[layers]]
+  name = "colorscheme"
+
+[[layers]]
+  name = "fzf"
+
+[[layers]]
+  name = "git"
+
+[[layers]]
   name = "lang#go"
+
+[[layers]]
+  name = "lang#php"
 
 [[layers]]
   name = "lang#puppet"
 
 [[layers]]
-  name = "colorscheme"
+  name = "lang#dockerfile"
+
+[[layers]]
+  name = 'shell'
+  default_position = 'top'
+  default_height = 30

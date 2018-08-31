@@ -68,6 +68,7 @@ bindkey -v
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
 alias gs="git status"
+alias flnssh="ssh -i Dropbox/Freelancer/ssh/id_rsa"
 
 [ -f /usr/share/autojump/autojump.sh ] && source /usr/share/autojump/autojump.sh
 [ -f ~/github.com/wenzhengjiang/dotfiles/fzf/fzf.utility.zsh ] && source ~/github.com/wenzhengjiang/dotfiles/fzf/fzf.utility.zsh
@@ -76,3 +77,4 @@ alias gs="git status"
 export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
 export PATH=$GOBIN:$PATH
+export PATH="$HOME/src/github.com/phacility/arcanist/bin:$PATH"
