@@ -71,7 +71,7 @@ alias gs="git status"
 alias flnssh="ssh -i Dropbox/Freelancer/ssh/id_rsa"
 
 [ -f /usr/share/autojump/autojump.sh ] && source /usr/share/autojump/autojump.sh
-[ -f ~/github.com/wenzhengjiang/dotfiles/fzf/fzf.utility.zsh ] && source ~/github.com/wenzhengjiang/dotfiles/fzf/fzf.utility.zsh
+[ -f ~/src/github.com/wenzhengjiang/dotfiles/fzf/fzf.utility.zsh ] && source ~/src/github.com/wenzhengjiang/dotfiles/fzf/fzf.utility.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export GOPATH=$HOME/go
