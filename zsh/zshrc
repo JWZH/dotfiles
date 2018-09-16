@@ -65,16 +65,48 @@ if [ "$TMUX" = ""  ]; then tmux; fi
 # Vim key binding
 bindkey -v
 
-# Example aliases
-alias zshconfig="vim ~/.zshrc"
-alias gs="git status"
-alias flnssh="ssh -i Dropbox/Freelancer/ssh/id_rsa"
-
 [ -f /usr/share/autojump/autojump.sh ] && source /usr/share/autojump/autojump.sh
 [ -f ~/src/github.com/wenzhengjiang/dotfiles/fzf/fzf.utility.zsh ] && source ~/src/github.com/wenzhengjiang/dotfiles/fzf/fzf.utility.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# Golang
 export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
 export PATH=$GOBIN:$PATH
+
+alias zshconfig="vim ~/.zshrc"
+alias flnssh="ssh -i Dropbox/Freelancer/ssh/id_rsa"
+
+# Git
+alias gdh="git diff HEAD"
+alias gdh~="git diff HEAD~"
+alias gcm="git checkout master"
+alias gm="git rebase master"
+
+# Arcanist
 export PATH="$HOME/src/github.com/phacility/arcanist/bin:$PATH"
+alias arcclean='git branch -D `git branch | grep -E "arcpatch.*"`'
+function adm() {
+  arc diff master "$@"
+}
+function adh() {
+  arc diff HEAD~ "$@" && git reset HEAD~ && git checkout -- .
+}
+function ap() {
+  arc patch "$@"
+}
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Rundeck
+
+function rundeck_env() {
+  if [ "$1" = "prod" ]; then 
+    export RUNDECK_AUTH_TOKEN=TCUnOK4TXKwzgnqmR70Z3ZrF9NrPWIqf
+  else 
+    export RUNDECK_AUTH_TOKEN=KH9ZLr2irhex5aW8yxWtpKET6oKJwR9U
+  fi
+}
