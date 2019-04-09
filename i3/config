@@ -170,5 +170,4 @@ bindsym XF86AudioRaiseVolume exec amixer set Master 5+
 bindsym XF86AudioLowerVolume exec amixer set Master 5-
 
 # Suspend and lock screen
-bindsym $mod+Ctrl+Shift+l exec i3lock -c 000000 -n
-bindsym $mod+Ctrl+Shift+s exec systemctl suspend && i3lock -c 000000 -n
+bindsym $mod+Ctrl+Shift+l exec systemctl suspend && i3lock -c 000000 -n
