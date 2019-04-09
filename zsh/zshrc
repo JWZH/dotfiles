@@ -101,12 +101,3 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Rundeck
-
-function rundeck_env() {
-  if [ "$1" = "prod" ]; then 
-    export RUNDECK_AUTH_TOKEN=TCUnOK4TXKwzgnqmR70Z3ZrF9NrPWIqf
-  else 
-    export RUNDECK_AUTH_TOKEN=KH9ZLr2irhex5aW8yxWtpKET6oKJwR9U
-  fi
-}
