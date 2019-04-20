@@ -53,13 +53,7 @@
   name = "lang#go"
 
 [[layers]]
-  name = "lang#php"
-
-[[layers]]
-  name = "lang#puppet"
-
-[[layers]]
-  name = "lang#dockerfile"
+  name = "lang#python"
 
 [[layers]]
   name = 'shell'
