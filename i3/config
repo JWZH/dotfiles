@@ -160,7 +160,8 @@ bar {
 # Autostart
 exec --no-startup-id nm-applet
 exec --no-startup-id sh /home/wjiang/.dropbox-dist/dropboxd
-exec --no-startup-id fluxgui
+exec --no-startup-id redshift-gtk
+exec --no-startup-id xinput disable 'SynPS/2 Synaptics TouchPad'
 exec_always fcitx-autostart
 
 # Sreen brightness controls
